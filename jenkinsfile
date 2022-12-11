@@ -2,7 +2,7 @@ pipeline {
            agent {
 		           node {
 				          label '2'
-						  customWorkspace '/mnt/project-2022'
+						  customWorkspace '/home/ec2-user/project22'
 						   }
 						    }
 							stages {
