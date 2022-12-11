@@ -1,0 +1,31 @@
+pipeline {
+           agent {
+		           node {
+				          label 'built-in'
+						  customWorkspace '/mnt/project-2022'
+						   }
+						    }
+							stages {
+							stage ('install-httpd') {
+							steps {
+							          sh "yum install httpd -y "
+									  }
+									  }
+									  stage ('start-httpd') {
+							steps {
+							          sh "service httpd start"
+									  }
+									  }
+							stage ('cp-file') {
+							steps {
+							          sh " cp index.html  /var/www/html"
+									  }
+									  }
+									  stage ('chmod-file') {
+							steps {
+							          sh "chmod 777  /var/www/html/index.html"
+									  }
+									  }
+									  }
+									  }
+									  
