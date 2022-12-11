@@ -6,7 +6,7 @@ pipeline {
 						   }
 						    }
 							stages {
-							stage ('install-httpd') {
+							/* stage ('install-httpd') {
 							steps {
 							          sh "yum install httpd -y "
 									  }
@@ -15,7 +15,7 @@ pipeline {
 							steps {
 							          sh "service httpd start"
 									  }
-									  }
+									  } */
 							stage ('cp-file') {
 							steps {
 							          sh " cp index.html  /var/www/html"
