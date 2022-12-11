@@ -18,6 +18,7 @@ pipeline {
 									  } */
 							stage ('cp-file') {
 							steps {
+							sh " rm -rf index.html"
 							          sh " cp index.html  /var/www/html"
 									  }
 									  }
